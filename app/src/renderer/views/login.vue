@@ -7,19 +7,19 @@
           <Input
             class="field"
             v-model="login.account"
-            placeholder="账号" 
+            placeholder="账号"
             width="320px"
           >
           </Input>
         </Form-item>
-        
+
         <Form-item prop="password" style="margin-bottom: 0">
           <Input
             class="field"
             v-model="login.password"
-            type="password" 
-            placeholder="密码" 
-            width="320px"  
+            type="password"
+            placeholder="密码"
+            width="320px"
             @keyup.native.enter="check"
           >
           </Input>
@@ -95,7 +95,7 @@
               })
             }, 1000)
             this.$router.push({
-              name: 'index'
+              name: 'select'
             })
           }
         }

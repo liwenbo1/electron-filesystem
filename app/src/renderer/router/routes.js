@@ -15,6 +15,12 @@ const Folder = resolve => {
     resolve(module)
   })
 }
+
+const Select = resolve => {
+  import('@/views/select/index').then(module => {
+    resolve(module)
+  })
+}
 const routes = [
   {
     path: '/computer',
@@ -25,7 +31,8 @@ const routes = [
       name: 'folder',
       component: Folder
     }]
-  }, {
+  },
+  {
     path: '/',
     name: 'login',
     component: Login
@@ -33,6 +40,11 @@ const routes = [
   {
     path: '*',
     redirect: '/computer'
+  },
+  {
+    path: '/select',
+    name: 'select',
+    component: Select
   }
 ]
 
